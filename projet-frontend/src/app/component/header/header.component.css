@@ -1,0 +1,58 @@
+
+
+a {
+    text-decoration: none; 
+    color:white;
+    margin:1rem;
+   
+  }
+  .header{
+   
+    display:flex;
+    justify-content:space-between;
+    position:fixed;
+    top:0;
+    z-index:1000;
+    width: 100%;
+    padding:0 14rem;
+    font-weight: 500;
+    font-size: 1,5rem;
+    height: 10%;
+    text-transform:uppercase;
+    align-items: center;
+    box-sizing:border-box;
+    box-shadow:0 0.2rem 0.25rem rgba(146, 143, 143, 0.5);
+    background-color:#1C6A9D;
+  }
+  .menu{
+    display:flex; 
+    justify-content: space-between;
+    align-items: center;
+    width: 24%;
+    height: 5rem; 
+  }
+  .button-link{
+      display: flex;
+      justify-content: center;
+      align-items: center;  
+  }
+ 
+  
+  .button-login:focus{
+      outline:none;
+      
+  
+  }
+  .active{
+   color:#EE8D22;
+   font-weight: 800;
+  }
+  
+  @media (min-width: 1024px){
+  
+  
+  
+  
+  
+  
+  }
