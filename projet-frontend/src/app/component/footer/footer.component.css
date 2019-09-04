@@ -2,8 +2,14 @@
 
     display:flex;
     justify-content: center;
-    background-color: #bbbbbb;
+    background-color: #1c6a9d;
     color:white;
     height:15rem ;
     align-items: center;
+    position: absolute;
+    bottom: 0%;
+    left:0;
+    right: 0;
 }
+
+ 
