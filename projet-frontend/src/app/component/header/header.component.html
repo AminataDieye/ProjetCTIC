@@ -15,10 +15,7 @@
           <a [routerLink]="['/contact']" routerLinkActive="active">
             Contact
           </a>
-         
-    </div> 
-
-    <div class="button-link" routerLinkActive="active">
+           <div class="button-link" routerLinkActive="active">
       <a [routerLink]="['/login']" >
         <button  *ngIf="!loginService.isLoggedIn" class="button-login ">
          LOGIN 
@@ -26,5 +23,9 @@
       </a>
      
   </div>
+         
+    </div> 
+
+   
       
   </nav>
