@@ -20,8 +20,5 @@ export class LoginService{
     else
       return this.isLoggedIn=false;
   }
-  seDeconnecter():void{
-    this.isLoggedIn=false;
-    this.router.navigate(['/accueil']);
-  }
+ 
 }

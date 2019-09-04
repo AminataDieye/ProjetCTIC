@@ -9,17 +9,17 @@ import { ProposerContenusComponent } from './component/proposer-contenus/propose
 import { AuthGuard } from './auth/auth.guard';
 
 const routes: Routes = [
-  //{ path: "accueil", component: AccueilComponent },
+  { path: "accueil", component: AccueilComponent },
   { path: "edition", component: EditionComponent },
   { path: "archives", component: ArchivesComponent },
   { path: "proposer-contenus", component: ProposerContenusComponent },
   {
-    path: "accueil",
+    path: "login",
     component: AccueilComponent,
     canActivate: [AuthGuard]
   },
   { path: "contact", component: ContactComponent },
-  { path: "login", component: LoginComponent },
+  //{ path: "login", component: LoginComponent },
   { path: "", redirectTo: "/home", pathMatch: "full" },
   // { path: "**", component: PageNotFoundComponent }
 ];
