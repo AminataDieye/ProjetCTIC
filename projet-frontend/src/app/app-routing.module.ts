@@ -13,13 +13,13 @@ const routes: Routes = [
   { path: "edition", component: EditionComponent },
   { path: "archives", component: ArchivesComponent },
   { path: "proposer-contenus", component: ProposerContenusComponent },
-  {
+  /*{
     path: "login",
     component: AccueilComponent,
     canActivate: [AuthGuard]
-  },
+  },*/
   { path: "contact", component: ContactComponent },
-  //{ path: "login", component: LoginComponent },
+  { path: "login", component: LoginComponent },
   { path: "", redirectTo: "/home", pathMatch: "full" },
   // { path: "**", component: PageNotFoundComponent }
 ];

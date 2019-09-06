@@ -15,7 +15,7 @@ export class LoginService{
 
   seConnecter(login,password){
    
-    if(login ==='admin' && password === 'admin')
+    if(login ==='amy' && password === 'admin')
       return this.isLoggedIn=true;
     else
       return this.isLoggedIn=false;

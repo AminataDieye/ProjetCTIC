@@ -15,15 +15,10 @@
           <a [routerLink]="['/contact']" routerLinkActive="active">
             Contact
           </a>
-           <div class="button-link" routerLinkActive="active">
-      <a [routerLink]="['/login']" >
-        <button  *ngIf="!loginService.isLoggedIn" class="button-login ">
-         LOGIN 
-       </button>   
-      </a>
-     
-  </div>
-         
+
+          <a [routerLink]="['/login']" routerLinkActive="active">
+            Se connecter
+          </a>
     </div> 
 
    

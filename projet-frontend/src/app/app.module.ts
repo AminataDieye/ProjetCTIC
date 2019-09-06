@@ -11,6 +11,8 @@ import { ContactComponent } from './component/contact/contact.component';
 import { LoginComponent } from './component/login/login.component';
 import { EditionComponent } from './component/edition/edition.component';
 import { ProposerContenusComponent } from './component/proposer-contenus/proposer-contenus.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AccueilAdminComponent } from './component/accueil-admin/accueil-admin.component';
 
 @NgModule({
   declarations: [
@@ -22,10 +24,13 @@ import { ProposerContenusComponent } from './component/proposer-contenus/propose
     ContactComponent,
     LoginComponent,
     EditionComponent,
-    ProposerContenusComponent
+    ProposerContenusComponent,
+    AccueilAdminComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule
   ],
   providers: [],

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LoginService } from "src/app/services/login.service";
+import { LoginService } from 'src/app/services/login.service';
 import { FormBuilder } from '@angular/forms';
 import {Router } from '@angular/router';
 
@@ -9,7 +9,6 @@ import {Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  titre:string = "Veuillez vous connecter";
   color:string = '';
   succes:boolean;
   error:boolean;
@@ -29,12 +28,11 @@ export class LoginComponent implements OnInit {
   }
 
  changerTitle(customerdata){
-   this.titre=customerdata.titre;
    
   }
   seConnecter(data){
     this.normal=true;
-    this.message="Authentification en cours....";
+    this.message="Veuillez patientez....";
     this.succes=false;
     this.error=false;
    
@@ -42,14 +40,15 @@ export class LoginComponent implements OnInit {
     if(this.loginService.seConnecter(data.login,data.password)){
        this.normal=false
        this.succes=true;
-       this.message="Authentification réussie";
       
-       let redirect = this.loginService.redirectUrl ? this.router.parseUrl(this.loginService.redirectUrl) : '/edition';
+       let redirect = this.loginService.redirectUrl ? this.router.parseUrl(this.loginService.redirectUrl) : '/accueil-admin';
       setTimeout(() => this.router.navigateByUrl(redirect),2000);
     }else{
       this.normal=false;
       this.error=true;
-      this.message="Désolé! Authentification échouée";  
+      this.message="Désolé! Authentification échouée";
+     
+     
     } 
   },2000);
     
