@@ -1,3 +1,10 @@
+.header{
+  background-color:#1C6A9D;
+}
+.active{
+ color:#EE8D22;
+ font-weight: 800;
+}
 /*
 
 a {
