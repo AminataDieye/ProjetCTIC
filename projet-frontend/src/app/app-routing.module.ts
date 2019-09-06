@@ -7,6 +7,7 @@ import { EditionComponent } from './component/edition/edition.component';
 import { ContactComponent } from './component/contact/contact.component';
 import { ProposerContenusComponent } from './component/proposer-contenus/proposer-contenus.component';
 import { AuthGuard } from './auth/auth.guard';
+import { AccueilAdminComponent } from './component/accueil-admin/accueil-admin.component';
 
 const routes: Routes = [
   { path: "accueil", component: AccueilComponent },
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: "contact", component: ContactComponent },
   { path: "login", component: LoginComponent },
   { path: "", redirectTo: "/home", pathMatch: "full" },
+  { path : "accueil-admin", component: AccueilAdminComponent},
   // { path: "**", component: PageNotFoundComponent }
 ];
 
