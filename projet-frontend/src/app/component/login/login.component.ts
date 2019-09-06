@@ -9,6 +9,7 @@ import {Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  titre:string = "Entrer votre login et votre password";
   color:string = '';
   succes:boolean;
   error:boolean;
@@ -28,11 +29,12 @@ export class LoginComponent implements OnInit {
   }
 
  changerTitle(customerdata){
+   this.titre=customerdata.titre;
    
   }
   seConnecter(data){
     this.normal=true;
-    this.message="Veuillez patientez....";
+    this.message="Veuillez patienter....";
     this.succes=false;
     this.error=false;
    
