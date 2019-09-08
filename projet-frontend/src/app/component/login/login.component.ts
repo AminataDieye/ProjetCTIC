@@ -9,7 +9,7 @@ import {Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  titre:string = "Entrer votre login et votre password";
+  titre:string = "Veillez vous Connecter";
   color:string = '';
   succes:boolean;
   error:boolean;
