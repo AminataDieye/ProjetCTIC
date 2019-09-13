@@ -1,5 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { MatButtonModule, MatCardModule, MatFormFieldModule } from '@angular/material';
+
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +16,7 @@ import { EditionComponent } from './component/edition/edition.component';
 import { ProposerContenusComponent } from './component/proposer-contenus/proposer-contenus.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AccueilAdminComponent } from './component/accueil-admin/accueil-admin.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -31,7 +35,9 @@ import { AccueilAdminComponent } from './component/accueil-admin/accueil-admin.c
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    AppRoutingModule
+    MatButtonModule, MatCardModule, MatFormFieldModule,
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
