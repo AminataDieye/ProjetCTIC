@@ -10,8 +10,7 @@
 .login-container{
     display:flex;
     flex-direction: column;
-  
-
+    
 }
 .input-titre-group{
     display:flex;
@@ -32,7 +31,7 @@
 .button-change-titre{
     height:1.9rem;
     border:none;
-    /* padding: 1rem; */
+    padding: 1rem; 
    color: #FFFFFF;
     background-color:#217781;
     font-weight: 500;
@@ -47,27 +46,30 @@ flex-direction: column;
 
 
 }
-.input-login{
+.form-control{
     height:1.5rem;
     border: 0.005rem solid #424242;
     padding: 0.5rem;
     margin:1rem 0;
     font-size:1rem;
 }
-.input-password{
+/*.input-password{
     height:1.5rem;
     padding: 0.5rem;
     border: 0.005rem solid #424242;
     margin:1rem 0;
    
     font-size:1rem;
-}
+}*/
 
 .button-seconnecter{
     height:2.5rem;
     margin:1rem 0;
     border:none;
-   
+   display: block;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
     color: #FFFFFF;
     background-color:#1c6a9d;
     border-radius:0.2rem;
@@ -94,3 +96,4 @@ flex-direction: column;
     font-weight: 500;
     color:#217781;
 }
+ 
