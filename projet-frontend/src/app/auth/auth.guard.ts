@@ -26,5 +26,29 @@ export class AuthGuard implements CanActivate {
 
     // return false;
   }
-  
 }
+//component 
+ /* seConnecter(identifiants){
+    this.loginService.login(identifiants.login, identifiants.password).subscribe(
+      (data)=>{
+        this.router.navigate(['/archive']);
+      },
+      (error)=>{
+        alert('identifiants incorrectes ')
+      }
+    )
+    
+  }*/
+  // service
+  /* login(login, password){
+    return this.http.post('/login',{login: login, password: password});
+  }
+
+  // API
+  // if user exists
+  // res.json(user data)
+  // otherwise
+  // res.status(404).json()
+}
+
+*/

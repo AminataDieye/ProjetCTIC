@@ -13,6 +13,7 @@ import { EditionComponent } from './component/edition/edition.component';
 import { ProposerContenusComponent } from './component/proposer-contenus/proposer-contenus.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AccueilAdminComponent } from './component/accueil-admin/accueil-admin.component';
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { AccueilAdminComponent } from './component/accueil-admin/accueil-admin.c
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [],
