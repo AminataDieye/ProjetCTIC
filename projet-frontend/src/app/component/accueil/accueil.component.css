@@ -33,6 +33,12 @@ text-align : left;
 
 
 }
+.ins
+{
+    text-decoration-color: #EE8D22;
+    text-decoration: underline;
+    text-decoration-style: 10px solid;
+}
 .rectangle2{
 	width:400px;
 	height:500px;

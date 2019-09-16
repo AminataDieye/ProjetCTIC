@@ -1,3 +1,13 @@
-p{
-    color: blue;
-}
+ .mat-card{
+     background: #ffffff;
+ }
+ .mat-card-content{
+     color: black;
+ }
+ .mat-card-title{
+     color: black;
+ }
+ .button-envoyer{
+     background: #1c6a9d;
+      color:#ffffff;
+ }
