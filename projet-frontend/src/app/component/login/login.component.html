@@ -3,22 +3,21 @@
           <form #labeldisplay="ngForm" (ngSubmit)="changerTitle(labeldisplay.value)">
             
           </form> 
-               <p [class.normal]="true"  *ngIf="normal" >{{message}}</p>
-               <p [class.vert]="true" *ngIf="succes" >{{message}}</p>
-               <p [class.red]="true" *ngIf="error" >{{message}}</p>
-            <form [formGroup]="checkoutForm" (ngSubmit) = "seConnecter(checkoutForm.value)" >
-              <div class="form-group">
-                  <h3 style=" text-align: center"class="display-titre">{{titre}}</h3>
-                  <label for="exampleInputLogin">login</label>
-                  <input class="form-control"  required type="text" id="exampleInputLogin" placeholder ="login" formControlName ="login" aria-describedby="loginhelp" > 
-                  <small id="emailHelp" class="form-text text-muted">We'll never share your login with anyone else.</small>
-                      </div>
-                      <div class="form-group">
-                        <label for="exampleInputpassword">Password</label>
-                  <input class="form-control" id="exampleInputpassword" required type="password"  placeholder ="password" formControlName ="password">
-                    </div>
-                  <button class="button-seconnecter" [disabled]=checkoutForm.invalid type="submit">SE CONNECTER</button>
-             
-           </form>  
+               
+            <div class="login">
+              <div class="login-triangle"></div>
+            <p [class.normal]="true" *ngIf="normal">{{message}}</p>
+            <p [class.vert]="true" *ngIf="succes">{{message}}</p>
+            <p [class.red]="true" *ngIf="error">{{message}}</p>
+              <h2 class="login-header">Log in</h2>
+            
+              <form class="login-container" [formGroup]=" checkoutForm" (ngSubmit)="seConnecter(checkoutForm.value)">
+                <p><input required type="login" placeholder="login" formControlName="login"></p>
+                <p><input required type="password" placeholder="password" formControlName="password"></p>
+                <p><button class="button-seconnecter" [disabled]=checkoutForm.invalid type="submit">SE CONNECTER</button>
+                </p>
+              </form>
+            </div>
+
         </div> 
       </section>
