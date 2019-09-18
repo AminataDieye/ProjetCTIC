@@ -11,19 +11,23 @@ export class LoginService{
 
   isLoggedIn=false;
   redirectUrl: string;
-  constructor(private router:Router) {}
+  constructor(private router:Router, private http: HttpClient) {}
 
   seConnecter(login, password) {
-    if(login ==='admin' && password === 'admin')
-    return this.isLoggedIn=true;
-  else
-    return this.isLoggedIn=false;
+    return this.http.post('/login', {login: login, password: password});
 }
+
 seDeconnecter():void{
   this.isLoggedIn=false;
-  this.router.navigate(['/home']);
-}  
+  this.router.navigate(['/accueil']);
+} 
 }
+/* service
+   login(login, password){
+    return this.http.post('/login',{login: login, password: password});
+  }
+}
+*/
 
 
   

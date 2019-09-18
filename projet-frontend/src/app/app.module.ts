@@ -17,6 +17,11 @@ import { ProposerContenusComponent } from './component/proposer-contenus/propose
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AccueilAdminComponent } from './component/accueil-admin/accueil-admin.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NouvelleEditionComponent } from './component/nouvelle-edition/nouvelle-edition.component';
+import { NouveauArticleComponent } from './component/nouveau-article/nouveau-article.component';
+import { LogoutComponent } from './component/logout/logout.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -29,7 +34,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     LoginComponent,
     EditionComponent,
     ProposerContenusComponent,
-    AccueilAdminComponent
+    AccueilAdminComponent,
+    NouvelleEditionComponent,
+    NouveauArticleComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +45,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ReactiveFormsModule,
     MatButtonModule, MatCardModule, MatFormFieldModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

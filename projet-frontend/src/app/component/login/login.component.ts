@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { LoginService } from 'src/app/services/login.service';
 import { FormBuilder } from '@angular/forms';
 import {Router } from '@angular/router';
+import { HttpClient } from "@angular/common/http";
 
 @Component({
   selector: 'app-login',
@@ -32,7 +33,7 @@ export class LoginComponent implements OnInit {
    this.titre=customerdata.titre;
    
   }
-  seConnecter(data){
+ /* seConnecter(data){
     this.normal=true;
     this.message="Veuillez patienter....";
     this.succes=false;
@@ -40,19 +41,32 @@ export class LoginComponent implements OnInit {
    
     setTimeout(() =>{
     if(this.loginService.seConnecter(data.login,data.password)){
-       this.normal=false
-       this.succes=true;
-      
+       
+      this.normal=false
+       this.succes=true; 
        let redirect = this.loginService.redirectUrl ? this.router.parseUrl(this.loginService.redirectUrl) : '/accueil-admin';
       setTimeout(() => this.router.navigateByUrl(redirect),2000);
-    }else{
+    }
+    else{
       this.normal=false;
       this.error=true;
       this.message="Désolé! Authentification échouée";
-     
-     
-    } 
+         } 
   },2000);
+    
+  }
+}*/
+
+//component 
+ seConnecter(identifiants){
+    this.loginService.seConnecter(identifiants.login, identifiants.password).subscribe(
+      (data)=>{
+        this.router.navigate(['/archive']);
+      },
+      (error)=>{
+        alert('identifiants incorrectes ')
+      }
+    )
     
   }
 }

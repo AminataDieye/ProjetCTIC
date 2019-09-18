@@ -2,23 +2,36 @@
 <nav class="header" >
     <div class="menu">
         <a [routerLink]="['/accueil']" routerLinkActive="active" class="text-left">
-           &nbsp;   Accueil
+           Accueil
         </a>
-        <a [routerLink]="['/edition']" routerLinkActive="active">
+        <a *ngIf="!logins.isLoggedIn"[routerLink]="['/edition']" routerLinkActive="active">
           Edition du mois
         </a>
         <a [routerLink]="['/archives']" routerLinkActive="active">
           Archives
         </a>
-        <a [routerLink]="['/proposer-contenus']" routerLinkActive="active">
-            Proposer des contenus
-          </a>
-          <a [routerLink]="['/contact']" routerLinkActive="active">
+        <a  *ngIf="!logins.isLoggedIn"
+        [routerLink]="['/proposer-contenus']" routerLinkActive="active">
+             Proposer des contenus
+         </a>
+
+          <a *ngIf="!logins.isLoggedIn" [routerLink]="['/contact']" routerLinkActive="active">
             Contact
           </a>
 
-          <a [routerLink]="['/login']" routerLinkActive="active">
+          <a *ngIf="!logins.isLoggedIn" [routerLink]="['/login']" routerLinkActive="active">
             Se connecter
+          </a>
+
+          <a *ngIf="logins.isLoggedIn" [routerLink]="['/nouvelle-edition']" routerLinkActive="active">
+            Nouvelle edition mensuelle
+          </a>
+
+          <a *ngIf="logins.isLoggedIn" [routerLink]="['/nouveau-article']" routerLinkActive="active">
+            Nouveau article
+          </a>
+          <a *ngIf="logins.isLoggedIn" [routerLink]="['/logout']" routerLinkActive="active">
+            Se deconnecter
           </a>
     </div>     
   </nav>
