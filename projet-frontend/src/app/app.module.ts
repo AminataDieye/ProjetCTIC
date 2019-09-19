@@ -21,6 +21,7 @@ import { NouvelleEditionComponent } from './component/nouvelle-edition/nouvelle-
 import { NouveauArticleComponent } from './component/nouveau-article/nouveau-article.component';
 import { LogoutComponent } from './component/logout/logout.component';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -46,7 +47,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatButtonModule, MatCardModule, MatFormFieldModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
