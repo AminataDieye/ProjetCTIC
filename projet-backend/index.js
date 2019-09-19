@@ -73,7 +73,7 @@ function initApp() {
   /******
    * VERIFIER LA CONNECTIVITE DU USER
    */
-  app.use((req, res, next) => {
+  /*app.use((req, res, next) => {
     let token = req.headers.token;
     jwt.verify(token, "secret", function(err, decoded) {
       if (err) {
@@ -86,12 +86,12 @@ function initApp() {
         next();
       }
     });
-  });
+  });*/
 
   /********* VERIFIER SI LE USER EST AUTORISE A
    * ACCEDER A LA ROUTE DEMANDEE
    */
-  app.use(acl.authorize);
+  //app.use(acl.authorize);
 
   /**
    * CHARGEMENT DES AUTRES ROUTES
