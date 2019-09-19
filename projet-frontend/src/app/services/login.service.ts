@@ -13,8 +13,8 @@ export class LoginService{
   redirectUrl: string;
   constructor(private router:Router, private http: HttpClient) {}
 
-  seConnecter(login, password) {
-    return this.http.post('/login', {login: login, password: password});
+  seConnecter(user) {
+    return this.http.post('${environment.BASE_API_URL}/users/login',user);
 }
 
 seDeconnecter():void{
@@ -22,6 +22,8 @@ seDeconnecter():void{
   this.router.navigate(['/accueil']);
 } 
 }
+
+
 /* service
    login(login, password){
     return this.http.post('/login',{login: login, password: password});

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { LoginService } from 'src/app/services/login.service';
+import { LoginService } from "src/app/services/login.service";
 import { FormBuilder } from '@angular/forms';
 import {Router } from '@angular/router';
-import { HttpClient } from "@angular/common/http";
+
 
 @Component({
   selector: 'app-login',
@@ -16,57 +16,35 @@ export class LoginComponent implements OnInit {
   error:boolean;
   normal:boolean;
   message;
-  checkoutForm;
+
   
-  constructor(private loginService:LoginService,private formBuilder: FormBuilder,private router:Router) {
+  constructor(private loginService:LoginService,private router:Router) {
      
-    this.checkoutForm = this.formBuilder.group({
-      login: '',
-      password: ''
-    });
+   
    }
 
   ngOnInit() {
+    
   }
 
  changerTitle(customerdata){
    this.titre=customerdata.titre;
    
   }
- /* seConnecter(data){
-    this.normal=true;
-    this.message="Veuillez patienter....";
-    this.succes=false;
-    this.error=false;
-   
-    setTimeout(() =>{
-    if(this.loginService.seConnecter(data.login,data.password)){
-       
-      this.normal=false
-       this.succes=true; 
-       let redirect = this.loginService.redirectUrl ? this.router.parseUrl(this.loginService.redirectUrl) : '/accueil-admin';
-      setTimeout(() => this.router.navigateByUrl(redirect),2000);
-    }
-    else{
-      this.normal=false;
-      this.error=true;
-      this.message="Désolé! Authentification échouée";
-         } 
-  },2000);
-    
-  }
-}*/
+ 
 
-//component 
- seConnecter(identifiants){
-    this.loginService.seConnecter(identifiants.login, identifiants.password).subscribe(
-      (data)=>{
-        this.router.navigate(['/archive']);
-      },
-      (error)=>{
-        alert('identifiants incorrectes ')
-      }
-    )
+ seConnecter(login,password){
+   console.log("user",{login,password});
+   const user={login,password}
+
+   this.loginService.seConnecter(user).subscribe(
+       (data)=>{
+         this.router.navigate(['/archive']);
+       },
+       (error)=>{
+         alert('identifiants incorrectes ')
+       }
+     )
     
   }
 }

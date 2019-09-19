@@ -1,8 +1,5 @@
 <section class="login-section">
         <div class="login-container">
-          <form #labeldisplay="ngForm" (ngSubmit)="changerTitle(labeldisplay.value)">
-            
-          </form> 
                
             <div class="login">
               <div class="login-triangle"></div>
@@ -11,10 +8,10 @@
             <p [class.red]="true" *ngIf="error">{{message}}</p>
               <h2 class="login-header">Log in</h2>
             
-              <form class="login-container" [formGroup]=" checkoutForm" (ngSubmit)="seConnecter(checkoutForm.value)">
-                <p><input required type="login" placeholder="login" formControlName="login"></p>
-                <p><input required type="password" placeholder="password" formControlName="password"></p>
-                <p><button class="button-seconnecter" [disabled]=checkoutForm.invalid type="submit">SE CONNECTER</button>
+              <form class="login-container"  >
+                <p><input required type="login" #login  placeholder="login" ></p>
+                <p><input required type="password" #password placeholder="password" ></p>
+                <p><button class="button-seconnecter" (click)="seConnecter(login.value,password.value)"  type="submit">SE CONNECTER</button>
                 </p>
               </form>
             </div>
