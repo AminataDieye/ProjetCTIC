@@ -22,7 +22,7 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
 
 body {
-  background: #456;
+  background: #ffff;
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -59,7 +59,7 @@ body {
 }
 
 .login-container {
-  background: #ebebeb;
+  background: #ffff;
   padding: 12px;
 }
 
