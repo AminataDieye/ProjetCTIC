@@ -21,10 +21,7 @@ export class AuthGuard implements CanActivate {
 
     // Navigate to the login page with extras
     this.router.navigate(['/login']);
-    //cette navigation annule automatiquement la navigation actuelle donc la methode return false
-    //mais on peut etre beaucoup plus explicite en ajoutant lr return false
-
-    // return false;
+    
   }
 }
 //component 
