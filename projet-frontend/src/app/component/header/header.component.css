@@ -12,7 +12,13 @@
  color:#EE8D22;
  font-weight: 400;
 }
-
+/*img{
+  left: 0.99%;
+  right: 74.42%;
+}*/
+img{
+  background: white;
+}
 
 a {
   text-decoration: none; 

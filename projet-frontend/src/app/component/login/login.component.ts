@@ -39,9 +39,9 @@ export class LoginComponent implements OnInit {
 
     this.loginService.seConnecter(user).subscribe(
       (data) => {
-        console.log("user", user);
-        this.router.navigateByUrl('/archives')
-        //this.router.navigate(['/archives']);
+        console.log("user", user)
+        this.router.navigateByUrl('/accueil-admin')
+
       },
       (error) => {
         alert('identifiants incorrectes ')
